@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    min-height: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.quiz-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quiz-info ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.quiz-info li {
+    margin: 0.5rem 0;
+    color: #2d3748;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.timer {
+    background: #4a5568;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.question {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.answers {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.answers label {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answers label:hover {
+    background: #edf2f7;
+    border-color: #667eea;
+}
+
+.answers input[type="radio"] {
+    margin-right: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a67d8;
+}
+
+.btn-secondary {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.slide {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+.active-slide {
+    opacity: 1;
+    display: block;
+}
+
+#results {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

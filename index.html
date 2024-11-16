@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-container" class="container">
+        <h1>Welcome to the JavaScript Quiz!</h1>
+        <div class="quiz-info">
+            <p>Test your JavaScript knowledge with this interactive quiz.</p>
+            <ul>
+                <li>Total Questions: <span id="total-questions">3</span></li>
+                <li>Time per Question: 20 seconds</li>
+                <li>Points per Question: 1</li>
+            </ul>
+        </div>
+        <button id="start-quiz" class="btn-primary">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container" class="container hidden">
+        <div class="header">
+            <div id="timer" class="timer">
+                <span id="time-icon">⏱</span>
+                <span id="time-left">20</span>s
+            </div>
+            <div id="progress">
+                Question <span id="current-question">1</span>/<span id="total">3</span>
+            </div>
+        </div>
+        <div class="quiz-content">
+            <div id="quiz"></div>
+        </div>
+        <div class="navigation">
+            <button id="previous" class="btn-secondary">Previous</button>
+            <button id="next" class="btn-secondary">Next</button>
+            <button id="submit" class="btn-primary">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div id="results-container" class="container hidden">
+        <h2>Quiz Results</h2>
+        <div id="results"></div>
+        <button id="restart-quiz" class="btn-primary">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
